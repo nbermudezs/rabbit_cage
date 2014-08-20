@@ -1,7 +1,7 @@
 require "rabbit_cage/version"
 require 'bunny'
 
-module RabbitCage
+class RabbitCage
   def self.client
 	  unless @client
 	    connection = Bunny.new(ENV['CLOUDAMQP_URL'])
